@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mbUMdhz2mGvsHtEbhknMH7KQ5BOdIKIOTZdbpC0RECM=",
+  "Source": "DocumentApi",
+  "BasePath": "_content/DocumentApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

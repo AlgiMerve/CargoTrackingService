@@ -1,0 +1,6 @@
+@PttApi_HostAddress = http://localhost:5222
+
+GET {{PttApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

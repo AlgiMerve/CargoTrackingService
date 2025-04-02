@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  documentapi:
+    build:
+      context: ./DocumentApi
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - postgres
+      - rabbitmq
+  pttapi:
+    build:
+      context: ./PttApi
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    depends_on:
+      - rabbitmq
+      - documentapi
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 27052024+
+      POSTGRES_DB: DocumentsDB
+    ports:
+      - "5432:5432"
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
